@@ -360,7 +360,7 @@ jive.fbldr.ContentCreator = function(template, form) {
             else {
                 var discussion = response.data;
                 discussion.contentType = (data.question) ? "question" : "discussion";
-                discussion.href = "/threads/" + response.data.id;
+                discussion.href = "/message/" + response.data.id+"/edit";
                 discussion.subject = data.subject;
                 
                 /* 
@@ -388,7 +388,7 @@ jive.fbldr.ContentCreator = function(template, form) {
             else {
                 var document = response.data;
                 document.contentType = "document";
-                document.href = "/docs/DOC-" + response.data.id;
+                document.href = "/docs/DOC-" + response.data.id+"/edit?ID="+response.data.id;
                 document.subject = data.subject;
 
                 if (template.content.includeAttachment) {
