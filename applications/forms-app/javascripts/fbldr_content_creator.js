@@ -360,7 +360,7 @@ jive.fbldr.ContentCreator = function(template, form) {
             else {
                 var discussion = response.data;
                 discussion.contentType = (data.question) ? "question" : "discussion";
-                discussion.href = "/message/" + response.data.id+"/edit";
+                discussion.href = "/threads/" + response.data.id+"/edit";
                 discussion.subject = data.subject;
                 
                 /* 
